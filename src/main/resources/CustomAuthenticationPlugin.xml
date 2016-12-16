@@ -1,0 +1,15 @@
+<Plugin type="Authentication">
+<author>David Lee</author>
+<email>david.lee@kastling.com</email>
+<creationDate>10:34:20, 2016-12-15</creationDate>
+<description>Custom User Authentication Plugin Template</description>
+<configuration>
+    <!--AttributeValuePair>
+        <Attribute type="string" length="20">DataSource</Attribute>
+        <mandatory>true</mandatory>
+        <instanceOverride>false</instanceOverride>
+        <globalUIOverride>true</globalUIOverride>
+        <value>jdbc/CISCO</value>
+    </AttributeValuePair-->
+</configuration>
+</Plugin>

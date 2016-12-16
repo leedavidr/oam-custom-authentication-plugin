@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
+jar {
+    manifest {
+        attributes  'Bundle-ManifestVersion': '1',
+                'Bundle-SymbolicName': 'CustomAuthenticationPlugin',
+                'Bundle-Name': 'CustomAuthenticationPlugin',
+                'Bundle-Version': '1',
+                'Bundle-Activator': 'com.kastling.plugin.CustomAuthenticationPlugin',
+                'Import-Package': 'org.osgi.framework;version="1.3.0",oracle.security.am.plugin,oracle.security.am.plugin.authn,oracle.security.am.plugin.impl,oracle.security.am.plugin.api,oracle.security.am.common.utilities.principal,oracle.security.idm,javax.security.auth'
+    }
+}
+
+repositories {
+    //mavenCentral()
+    //jcenter()
+
+    flatDir {
+        dirs 'src/main/resources'
+    }
+}
+
+dependencies {
+    compile name: 'felix'
+    compile name: 'identity-provider'
+    compile name: 'oam-plugin'
+    compile name: 'utilities'
+}
