@@ -1,8 +1,11 @@
-<Plugin type="Authentication">
+<Plugin name="CustomAuthenticationPlugin" type="Authentication">
 <author>David Lee</author>
 <email>david.lee@kastling.com</email>
 <creationDate>10:34:20, 2016-12-15</creationDate>
 <description>Custom User Authentication Plugin Template</description>
+<interface>oracle.security.am.plugin.authn.AbstractAuthenticationPlugIn
+</interface>
+<implementation>com.kastling.plugin.CustomAuthenticationPlugin</implementation>
 <configuration>
     <!--AttributeValuePair>
         <Attribute type="string" length="20">DataSource</Attribute>
